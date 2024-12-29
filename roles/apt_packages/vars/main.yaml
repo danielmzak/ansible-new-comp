@@ -19,6 +19,8 @@ apt_packages:
   - fd-find # https://github.com/sharkdp/fd
   - ripgrep # https://github.com/BurntSushi/ripgrep
   - autojump # https://github.com/wting/autojump
+  - fzf # https://github.com/junegunn/fzf
+  - zoxide # https://github.com/ajeetdsouza/zoxide
 
 custom_apt_repositories:
   - repo: "ppa:fish-shell/release-3" # https://github.com/fish-shell/fish-shell
