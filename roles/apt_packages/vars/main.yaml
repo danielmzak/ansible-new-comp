@@ -29,8 +29,8 @@ apt_packages:
 #
 # copy/paste
 #
-    - xclip
-    - xsel
+  - xclip
+  - xsel
 
 custom_apt_repositories:
   - repo: "ppa:fish-shell/release-3" # https://github.com/fish-shell/fish-shell
