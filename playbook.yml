@@ -6,7 +6,7 @@
     - common
 - hosts: laptop
   roles:
-   - apt_packages
+    - apt_packages
     - snap_packages
     - flatpak_packages
     - custom_installs
