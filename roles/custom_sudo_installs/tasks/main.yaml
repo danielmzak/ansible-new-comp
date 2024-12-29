@@ -3,9 +3,9 @@
 
 - name: Download Carvel installation script
   ansible.builtin.get_url:
-  url: https://carvel.dev/install.sh
-  dest: /tmp/install.sh
-  mode: '0755'  # Make the script executable
+    url: https://carvel.dev/install.sh
+    dest: /tmp/install.sh
+    mode: '0755'  # Make the script executable
 
 - name: Inspect the installation script (optional)
   ansible.builtin.command: cat /tmp/install.sh
