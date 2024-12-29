@@ -1,16 +1,22 @@
 ---
 essential_packages:
-  - restic
-  - curl
-  - git
-  - wget
   - software-properties-common
-
   - pkg-config
   - libssl-dev
   - build-essential
-
   - libncursesw5-dev
   - autotools-dev
   - autoconf
   - automake
+
+  - curl
+  - wget
+  - git
+  - zip
+  - unzip
+  - unrar # https://github.com/pmachapman/unrar
+
+  - fuse
+  - libfuse2
+
+  - restic

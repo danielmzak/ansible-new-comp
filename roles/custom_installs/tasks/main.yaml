@@ -23,9 +23,9 @@
   register: starship_installed
 
 - name: Install Starship
-  shell: "curl -sS https://starship.rs/install.sh | sh"
-  args:
-    creates: "{{ ansible_env.HOME }}/.local/bin/starship"  # Alternative idempotency check
+  shell: "curl -sS https://starship.rs/install.sh -- yes | sh"
+  #  args:
+  #    creates: "{{ ansible_env.HOME }}/.local/bin/starship"  # Alternative idempotency check
   when: not starship_installed.stat.exists
 
 #
