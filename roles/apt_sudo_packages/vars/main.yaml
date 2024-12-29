@@ -35,7 +35,7 @@ apt_packages:
 
   - jq # https://github.com/jqlang/jq
 
-custom_apt_repositories:
+#custom_apt_repositories:
 #  - repo: "ppa:fish-shell/release-3" # https://github.com/fish-shell/fish-shell
 #    state: present # Or "absent" to remove
 #  - repo: "deb https://... stable main"
