@@ -2,5 +2,9 @@
 snap_packages:
 #  - code  # VS Code
 #  - spotify
+
+# dev tools
   - jqp # tui https://github.com/noahgorstein/jqp
+  - yq # https://github.com/mikefarah/yq
+
   # - ...  # Your list of snap packages
