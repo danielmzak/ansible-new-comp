@@ -1,1 +1,27 @@
 ---
+- name: Install Carvel tools (including ytt)
+  tasks:
+    - name: Download Carvel installation script
+      ansible.builtin.get_url:
+        url: https://carvel.dev/install.sh
+        dest: /tmp/install.sh
+        mode: '0755'  # Make the script executable
+
+    - name: Inspect the installation script (optional)
+      ansible.builtin.command: cat /tmp/install.sh
+      register: script_content
+      changed_when: false  # This task doesn't change the system state
+
+    - name: Run the Carvel installation script
+      ansible.builtin.command: bash /tmp/install.sh
+      args:
+        creates: /usr/local/bin/ytt  # Skip if ytt is already installed
+
+    - name: Verify ytt installation
+      ansible.builtin.command: ytt version
+      register: ytt_version
+      changed_when: false  # This task doesn't change the system state
+
+    - name: Display ytt version
+      ansible.builtin.debug:
+        var: ytt_version.stdout
