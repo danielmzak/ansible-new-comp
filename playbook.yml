@@ -1,0 +1,10 @@
+---
+- hosts: laptop
+  become: true  # Use sudo for tasks that require it
+  become_method: sudo
+  roles:
+    - common
+    - apt_packages
+    - snap_packages
+    - flatpak_packages
+    - custom_installs

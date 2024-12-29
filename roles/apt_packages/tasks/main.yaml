@@ -1,0 +1,21 @@
+---
+- name: Add custom APT repositories
+  ansible.builtin.apt_repository:
+    repo: "{{ item.repo }}"
+    state: present
+    update_cache: yes
+  loop: "{{ custom_apt_repositories }}"
+  when: item.state == "present"
+
+- name: Remove custom APT repositories
+  ansible.builtin.apt_repository:
+    repo: "{{ item.repo }}"
+    state: absent
+  loop: "{{ custom_apt_repositories }}"
+  when: item.state == "absent"
+
+- name: Install APT packages
+  ansible.builtin.apt:
+    name: "{{ apt_packages }}"
+    state: present
+    update_cache: yes

@@ -1,0 +1,7 @@
+---
+flatpak_remotes:
+  - name: flathub
+    url: https://flathub.org/repo/flathub.flatpakrepo
+
+flatpak_packages:
+  - org.libreoffice.LibreOffice

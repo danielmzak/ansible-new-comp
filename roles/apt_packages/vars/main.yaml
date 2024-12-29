@@ -1,0 +1,12 @@
+---
+apt_packages:
+  - vlc
+  - chromium-browser
+  - ...  # Your list of default apt packages
+
+custom_apt_repositories:
+  - repo: "ppa:some/ppa"
+    state: present # Or "absent" to remove
+  - repo: "deb https://... stable main"
+    state: present # Or "absent" to remove
+  # ... Add more repos as needed

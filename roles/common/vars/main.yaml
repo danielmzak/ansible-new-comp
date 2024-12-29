@@ -1,0 +1,6 @@
+---
+essential_packages:
+  - curl
+  - git
+  - wget
+  - software-properties-common

@@ -1,0 +1,5 @@
+---
+snap_packages:
+  - code  # VS Code
+  - spotify
+  - ...  # Your list of snap packages
