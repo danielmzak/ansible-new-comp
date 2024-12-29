@@ -2,11 +2,12 @@
 apt_packages:
   - vlc
   - chromium-browser
-  - ...  # Your list of default apt packages
+  - fish # https://github.com/fish-shell/fish-shell
+#  - ...  # Your list of default apt packages
 
 custom_apt_repositories:
-  - repo: "ppa:some/ppa"
+  - repo: "ppa:fish-shell/release-3" # https://github.com/fish-shell/fish-shell
     state: present # Or "absent" to remove
-  - repo: "deb https://... stable main"
-    state: present # Or "absent" to remove
+#  - repo: "deb https://... stable main"
+#    state: present # Or "absent" to remove
   # ... Add more repos as needed
