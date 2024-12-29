@@ -10,7 +10,7 @@ apt_packages:
 
   - zsh
   - fish # https://github.com/fish-shell/fish-shell
-  - nushell
+#  - nushell # probably custom install via rust
 
 #
 # cli/tui sys tools

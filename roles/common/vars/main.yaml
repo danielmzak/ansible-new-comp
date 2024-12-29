@@ -4,3 +4,7 @@ essential_packages:
   - git
   - wget
   - software-properties-common
+
+  - pkg-config
+  - libssl-dev
+  - build-essential
