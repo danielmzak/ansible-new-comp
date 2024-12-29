@@ -16,7 +16,7 @@ essential_packages:
   - unzip
   - unrar # https://github.com/pmachapman/unrar
 
-  - fuse
-  - libfuse2
+#  - fuse # https://unix.stackexchange.com/questions/737169/ubuntu-fails-to-boot-due-to-gnome-display-manager-error - don't install !
+#  - libfuse2
 
   - restic
