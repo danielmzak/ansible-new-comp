@@ -10,9 +10,7 @@
   register: ohmyzsh_installed
 
 - name: Install Oh My Zsh
-  shell: "sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'"
-  args:
-    creates: "{{ ansible_env.HOME }}/.oh-my-zsh"  # Alternative idempotency check
+  shell: "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
   when: not ohmyzsh_installed.stat.exists
 
 #
