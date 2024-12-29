@@ -1,7 +1,7 @@
 ---
 apt_packages:
-  - vlc
-  - chromium-browser
+#  - vlc
+#  - chromium-browser
   - neovim # https://github.com/neovim/neovim / https://github.com/nvim-lua/kickstart.nvim
 
 #  - ...  # Your list of default apt packages
