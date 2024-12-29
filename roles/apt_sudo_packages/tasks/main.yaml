@@ -16,6 +16,6 @@
 
 - name: Install APT packages
   ansible.builtin.apt:
-    name: "{{ apt_packages }}"
+    name: "{{ apt_sudo_packages }}"
     state: present
     update_cache: yes
