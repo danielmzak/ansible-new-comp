@@ -14,7 +14,7 @@
 #  loop: "{{ custom_apt_repositories }}"
 #  when: item.state == "absent"
 
-- name: Install APT packages
+- name: Install APT (sudo) packages
   ansible.builtin.apt:
     name: "{{ apt_sudo_packages }}"
     state: present

@@ -7,8 +7,9 @@ apt_packages:
 # shell(s)
 #
 
-  - zsh
-  - fish # https://github.com/fish-shell/fish-shell
+#  - zsh
+#  - fish # https://github.com/fish-shell/fish-shell
+
 #  - nushell # probably custom install via rust
 
 #
