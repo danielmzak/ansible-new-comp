@@ -2,8 +2,23 @@
 apt_packages:
   - vlc
   - chromium-browser
-  - fish # https://github.com/fish-shell/fish-shell
 #  - ...  # Your list of default apt packages
+
+#
+# shell(s)
+#
+
+  - zsh
+  - fish # https://github.com/fish-shell/fish-shell
+  - nushell
+
+#
+# cli/tui sys tools
+#
+
+  - fd-find # https://github.com/sharkdp/fd
+  - ripgrep # https://github.com/BurntSushi/ripgrep
+  - autojump # https://github.com/wting/autojump
 
 custom_apt_repositories:
   - repo: "ppa:fish-shell/release-3" # https://github.com/fish-shell/fish-shell
