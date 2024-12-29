@@ -5,6 +5,12 @@ apt_sudo_packages:
 #  - ...  # Your list of default apt packages
 
 #
+# shell(s)
+#
+
+  - zsh
+
+#
 # cli/tui sys tools
 #
 
@@ -33,7 +39,7 @@ apt_sudo_packages:
 # dev tools
 #
 
-  - jq # https://github.com/jqlang/jq
+#  - jq # https://github.com/jqlang/jq
 
 #custom_apt_repositories:
 #  - repo: "ppa:fish-shell/release-3" # https://github.com/fish-shell/fish-shell

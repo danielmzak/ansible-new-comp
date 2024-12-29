@@ -6,7 +6,7 @@ apt_packages:
 # shell(s)
 #
 
-  - zsh
+##  - zsh
 #  - fish # https://github.com/fish-shell/fish-shell
 
 #  - nushell # probably custom install via rust
@@ -15,7 +15,7 @@ apt_packages:
 # cli/tui sys tools
 #
 
-#  - fd-find # https://github.com/sharkdp/fd
+  - fd-find # https://github.com/sharkdp/fd
 #  - ripgrep # https://github.com/BurntSushi/ripgrep
 #  - autojump # https://github.com/wting/autojump
 #  - fzf # https://github.com/junegunn/fzf
@@ -41,7 +41,7 @@ apt_packages:
 # dev tools
 #
 
-# - jq # https://github.com/jqlang/jq
+ - jq # https://github.com/jqlang/jq
 
 custom_apt_repositories:
   - repo: "ppa:fish-shell/release-3" # https://github.com/fish-shell/fish-shell
