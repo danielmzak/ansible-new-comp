@@ -1,5 +1,6 @@
 ---
 essential_packages:
+  - restic
   - curl
   - git
   - wget
@@ -8,3 +9,8 @@ essential_packages:
   - pkg-config
   - libssl-dev
   - build-essential
+
+  - libncursesw5-dev
+  - autotools-dev
+  - autoconf
+  - automake

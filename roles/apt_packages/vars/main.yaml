@@ -29,8 +29,19 @@ apt_packages:
 #
 # copy/paste
 #
-  - xclip
-  - xsel
+  - xclip # todo add link
+  - xsel # todo add link
+
+  - unrar # https://github.com/pmachapman/unrar
+  - hexyl # tui https://github.com/sharkdp/hexyl
+  - rclone # https://github.com/rclone/rclone
+  - age # https://github.com/FiloSottile/age
+
+#
+# dev tools
+#
+
+  - jq # https://github.com/jqlang/jq
 
 custom_apt_repositories:
   - repo: "ppa:fish-shell/release-3" # https://github.com/fish-shell/fish-shell
