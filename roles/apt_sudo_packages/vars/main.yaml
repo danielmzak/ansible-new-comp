@@ -1,5 +1,5 @@
 ---
-apt_packages:
+apt_sudo_packages:
   - neovim # https://github.com/neovim/neovim / https://github.com/nvim-lua/kickstart.nvim
 
 #  - ...  # Your list of default apt packages
