@@ -1,5 +1,5 @@
 ---
-apt_sudo_packages:
+apt_packages:
   - vlc
   - neovim # https://github.com/neovim/neovim / https://github.com/nvim-lua/kickstart.nvim
 
