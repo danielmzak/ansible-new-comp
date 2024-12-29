@@ -4,10 +4,9 @@
   become_method: sudo
   roles:
     - common
-    - apt_sudo_packages
-- hosts: laptop
-  roles:
     - apt_packages
     - snap_packages
     - flatpak_packages
+- hosts: laptop
+  roles:
     - custom_installs

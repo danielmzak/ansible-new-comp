@@ -1,13 +1,14 @@
 ---
-apt_packages:
-##  - vlc
+apt_sudo_packages:
+  - vlc
+  - neovim # https://github.com/neovim/neovim / https://github.com/nvim-lua/kickstart.nvim
 
 #
 # shell(s)
 #
 
-##  - zsh
-#  - fish # https://github.com/fish-shell/fish-shell
+  - zsh
+  - fish # https://github.com/fish-shell/fish-shell
 
 #  - nushell # probably custom install via rust
 
@@ -16,26 +17,26 @@ apt_packages:
 #
 
   - fd-find # https://github.com/sharkdp/fd
-#  - ripgrep # https://github.com/BurntSushi/ripgrep
-#  - autojump # https://github.com/wting/autojump
-#  - fzf # https://github.com/junegunn/fzf
-#  - zoxide # https://github.com/ajeetdsouza/zoxide
-#  - bat # https://github.com/sharkdp/bat
-#  - ncdu # https://code.blicky.net/yorhel/ncdu / https://dev.yorhel.nl/ncdu
-#  - nmap # https://nmap.org/
-#  - trash-cli # https://github.com/andreafrancia/trash-cli
+  - ripgrep # https://github.com/BurntSushi/ripgrep
+  - autojump # https://github.com/wting/autojump
+  - fzf # https://github.com/junegunn/fzf
+  - zoxide # https://github.com/ajeetdsouza/zoxide
+  - bat # https://github.com/sharkdp/bat
+  - ncdu # https://code.blicky.net/yorhel/ncdu / https://dev.yorhel.nl/ncdu
+  - nmap # https://nmap.org/
+  - trash-cli # https://github.com/andreafrancia/trash-cli
 
 #
 # copy/paste
 #
 
-#  - xclip # todo add link
-#  - xsel # todo add link
+  - xclip # todo add link
+  - xsel # todo add link
 
-#  - unrar # https://github.com/pmachapman/unrar
-#  - hexyl # tui https://github.com/sharkdp/hexyl
-#  - rclone # https://github.com/rclone/rclone
-#  - age # https://github.com/FiloSottile/age
+  - unrar # https://github.com/pmachapman/unrar
+  - hexyl # tui https://github.com/sharkdp/hexyl
+  - rclone # https://github.com/rclone/rclone
+  - age # https://github.com/FiloSottile/age
 
 #
 # dev tools
