@@ -13,3 +13,15 @@
   args:
     executable: /bin/bash
   when: not sdkman_installed.stat.exists
+
+---
+- name: Check if Oh My Zsh is installed
+  stat:
+    path: "{{ ansible_env.HOME }}/.oh-my-zsh"
+  register: ohmyzsh_installed
+
+- name: Install Oh My Zsh
+  shell: "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
+  args:
+    creates: "{{ ansible_env.HOME }}/.oh-my-zsh"  # Alternative idempotency check
+  when: not ohmyzsh_installed.stat.exists
