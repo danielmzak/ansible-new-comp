@@ -1,0 +1,43 @@
+---
+apt_packages:
+  - neovim # https://github.com/neovim/neovim / https://github.com/nvim-lua/kickstart.nvim
+
+#  - ...  # Your list of default apt packages
+
+#
+# cli/tui sys tools
+#
+
+  - fd-find # https://github.com/sharkdp/fd
+  - ripgrep # https://github.com/BurntSushi/ripgrep
+  - autojump # https://github.com/wting/autojump
+  - fzf # https://github.com/junegunn/fzf
+  - zoxide # https://github.com/ajeetdsouza/zoxide
+  - bat # https://github.com/sharkdp/bat
+  - ncdu # https://code.blicky.net/yorhel/ncdu / https://dev.yorhel.nl/ncdu
+  - nmap # https://nmap.org/
+  - trash-cli # https://github.com/andreafrancia/trash-cli
+
+#
+# copy/paste
+#
+  - xclip # todo add link
+  - xsel # todo add link
+
+  - unrar # https://github.com/pmachapman/unrar
+  - hexyl # tui https://github.com/sharkdp/hexyl
+  - rclone # https://github.com/rclone/rclone
+  - age # https://github.com/FiloSottile/age
+
+#
+# dev tools
+#
+
+  - jq # https://github.com/jqlang/jq
+
+custom_apt_repositories:
+#  - repo: "ppa:fish-shell/release-3" # https://github.com/fish-shell/fish-shell
+#    state: present # Or "absent" to remove
+#  - repo: "deb https://... stable main"
+#    state: present # Or "absent" to remove
+  # ... Add more repos as needed
