@@ -2,8 +2,9 @@
 
 - Install Ansible: `sudo apt update && sudo apt install ansible`
 - Navigate to your project directory: `cd ubuntu-laptop-setup`
--Run: `ansible-playbook -i inventory.ini playbook.yml -K`
+- Run: `ansible-playbook -i inventory.ini playbook.yml -K -vvv`
 - `-K` will prompt for the sudo password.
+- `-vvv` verbose mode, useful for debug
 
 ---
 
