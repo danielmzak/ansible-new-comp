@@ -7,7 +7,7 @@
     - apt_packages
     - snap_packages
     - flatpak_packages
-#    - custom_sudo_installs
+    - custom_sudo_installs
 - hosts: laptop
   roles:
     - custom_installs
