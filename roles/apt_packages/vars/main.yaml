@@ -1,6 +1,6 @@
 ---
 apt_packages:
-  - vlc
+##  - vlc
 
 #
 # shell(s)
