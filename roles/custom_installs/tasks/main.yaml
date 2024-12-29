@@ -1,7 +1,7 @@
 ---
 
 #
-# oh-my-zsh
+# https://ohmyz.sh/
 #
 
 - name: Check if Oh My Zsh is installed
@@ -10,11 +10,25 @@
   register: ohmyzsh_installed
 
 - name: Install Oh My Zsh
-  shell: "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
+  shell: "sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'"
   args:
     creates: "{{ ansible_env.HOME }}/.oh-my-zsh"  # Alternative idempotency check
   when: not ohmyzsh_installed.stat.exists
 
+#
+# https://starship.rs/
+#
+
+- name: Check if Starship is installed
+  stat:
+    path: "{{ ansible_env.HOME }}/.local/bin/starship"
+  register: starship_installed
+
+- name: Install Starship
+  shell: "curl -sS https://starship.rs/install.sh | sh"
+  args:
+    creates: "{{ ansible_env.HOME }}/.local/bin/starship"  # Alternative idempotency check
+  when: not starship_installed.stat.exists
 
 #
 # sdkman
