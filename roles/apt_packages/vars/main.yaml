@@ -38,6 +38,8 @@ apt_packages:
   - rclone # https://github.com/rclone/rclone
   - age # https://github.com/FiloSottile/age
 
+  - git-crypt # https://github.com/AGWA/git-crypt
+
 #
 # dev tools
 #

@@ -6,5 +6,6 @@ snap_packages:
 # dev tools
   - jqp # tui https://github.com/noahgorstein/jqp
   - yq # https://github.com/mikefarah/yq
+  - zellij # https://github.com/zellij-org/zellij
 
   # - ...  # Your list of snap packages
