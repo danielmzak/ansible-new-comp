@@ -1,0 +1,95 @@
+--- ~/.wezterm.lua
+
+-- Pull in the wezterm API
+local wezterm = require 'wezterm'
+local mux = wezterm.mux
+local act = wezterm.action
+
+wezterm.on('gui-startup', function()
+
+    local workspace_dir = '/home/dmz/Workspace'
+
+    local _, first_pane, window = mux.spawn_window {}
+    window:gui_window():maximize()
+    first_pane:split{
+        size = 0.5
+    }
+
+    local _, second_pane, _ = window:spawn_tab{
+        cwd = workspace_dir,
+        args = {"yazi"}
+    }
+
+    local _, third_pane, _ = window:spawn_tab{
+        cwd = workspace_dir
+    }
+end)
+
+-- This table will hold the configuration.
+local config = {}
+
+-- In newer versions of wezterm, use the config_builder which will
+-- help provide clearer error messages
+if wezterm.config_builder then
+    config = wezterm.config_builder()
+end
+
+use_dead_keys = false
+
+config.unix_domains = {{
+    name = 'unix'
+}}
+
+-- This causes `wezterm` to act as though it was started as
+-- `wezterm connect unix` by default, connecting to the unix
+-- domain on startup.
+-- If you prefer to connect manually, leave out this line.
+config.default_gui_startup_args = {'connect', 'unix'}
+
+config.font = wezterm.font 'Fira Code'
+config.font_size = 13
+
+-- color scheme:
+config.color_scheme = 'iTerm2 Pastel Dark Background'
+-- config.color_scheme = 'Jellybeans'
+-- config.color_scheme = 'Wombat'
+-- config.color_scheme = 'zenbones_dark'
+
+-- scrolling
+config.scrollback_lines = 99999
+config.enable_scroll_bar = true
+
+config.keys = {{
+    -- Move to the tab on the left
+    key = "LeftArrow",
+    mods = "ALT",
+    action = wezterm.action.ActivateTabRelative(-1)
+}, {
+    -- Move to the tab on the right
+    key = "RightArrow",
+    mods = "ALT",
+    action = wezterm.action.ActivateTabRelative(1)
+}, {
+    -- Bookmarks
+    key = "b",
+    mods = "ALT",
+    action = wezterm.action {
+        SpawnCommandInNewTab = {
+          args = { "zsh", "/home/dmz/Workspace/cz8/notes/bookmarks/lnks.sh" },
+        }
+    }
+},
+{
+    -- Prompts
+    key = "p",
+    mods = "ALT",
+    action = wezterm.action {
+        SpawnCommandInNewTab = {
+          args = { "zsh", "/home/dmz/Workspace/cz8/github/cli-prompt-organizer/pget.sh" },
+        }
+    }
+}
+}
+
+-- and finally, return the configuration to wezterm
+return config
