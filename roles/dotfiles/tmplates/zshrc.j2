@@ -1,0 +1,85 @@
+# Help directory (likely not used directly by interactive shells, but you might want to keep it)
+# HELPDIR="/nix/store/x011bx2xa0xw2qwlk7vzkgpf7l005qxb-zsh-5.9/share/zsh/$ZSH_VERSION/help"
+
+# Key bindings
+bindkey "^H" backward-delete-word
+
+# Custom functions
+function prev() {
+PREV=$(fc -lrn | head -n 1)
+sh -c "pet new `printf %q "$PREV"`"
+}
+
+
+# Source zsh-autosuggestions
+# source /nix/store/vv28ikvsqidxmkgk17pjrs9ds542c1yi-zsh-autosuggestions-0.7.0/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_STRATEGY=(history)
+
+# Oh My Zsh
+plugins=(git thefuck kubectl docker common-aliases dirhistory helm history web-search terraform)
+source $ZSH/oh-my-zsh.sh
+
+# History options
+HISTSIZE="10000"
+SAVEHIST="10000"
+HISTFILE="/home/dmz/.local/share/zsh/history"
+mkdir -p "$(dirname "$HISTFILE")"
+
+setopt HIST_FCNTL_LOCK
+setopt HIST_IGNORE_DUPS
+unsetopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+unsetopt HIST_EXPIRE_DUPS_FIRST
+setopt SHARE_HISTORY
+unsetopt EXTENDED_HISTORY
+setopt autocd
+
+# Load fzf, zoxide, kitty-integration, direnv, atuin if ZLE is on
+#if [[ $options[zle] = on ]]; then
+#eval "$(/nix/store/blqaxjh0wj83ayhqx1wwfjkrbhypml5s-fzf-0.54.2/bin/fzf --zsh)"
+#eval "$(/nix/store/xhd382paw81fhwxm4x240m1bk4hbiql4-atuin-18.3.0/bin/atuin init zsh )"
+#fi
+
+# eval "$(/nix/store/3cf00yza6r1j0w0fla0d4h1f8nai7pkx-zoxide-0.9.4/bin/zoxide init zsh )"
+
+
+
+
+#
+# Aliases
+#
+
+alias -- 'bat'='batcat --paging=never'
+alias -- 'curlip'='curl ifconfig.me'
+alias -- 'curltime'='curl -w "@$HOME/.curl-format.txt" -o /dev/null -s '
+alias -- 'ehome'='code ~/.config/home-manager/home.nix'
+alias -- 'epet'='code ~/.config/pet/snippet.toml'
+alias -- 'fd'='fd --hidden --exclude '\''.git'\'''
+alias -- 'git-summary'='~/Bin/tools/git-summary/git-summary'
+alias -- 'i'='idea -e'
+alias -- 'll'='eza -lahF --group-directories-first --color=auto --git --icons'
+alias -- 'ls'='eza -l --group-directories-first --color=auto --git --icons --no-permissions --no-user'
+alias -- 'n'='nvim'
+alias -- 'nn'='cd /home/dmz/Workspace/cz8/notes && code .'
+alias -- 'nv'='neovide'
+alias -- 'pbcopy'='xclip -selection clipboard'
+alias -- 'pbpaste'='xclip -selection clipboard -o'
+alias -- 'pi'='/home/dmz/Workspace/cz8/github/cli-prompt-organizer/pinbox.sh'
+alias -- 'rg'='rg --no-ignore --hidden'
+alias -- 's'='kitten ssh'
+alias -- 'tp'='telepresence'
+alias -- 'watchh'='watch '
+
+#
+# starship
+#
+
+eval "$(starship init zsh)"
+
+#
+# sdkman
+#
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

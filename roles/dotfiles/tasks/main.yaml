@@ -1,0 +1,20 @@
+---
+- name: Ensure dotfiles directory exists
+  file:
+    path: ~/.dotfiles
+    state: directory
+
+- name: Deploy static dotfiles
+  copy:
+    src: "{{ item }}"
+    dest: "~/.{{ item }}"
+  with_fileglob:
+    - "files/*"
+
+- name: Deploy templated dotfiles
+  template:
+    src: "{{ item }}.j2"
+    dest: "~/.{{ item }}"
+  with_items:
+    - zshrc
+    - bashrc
