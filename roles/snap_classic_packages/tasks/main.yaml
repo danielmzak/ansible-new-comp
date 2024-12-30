@@ -1,0 +1,6 @@
+---
+- name: Install snap (classic) packages
+  community.general.snap:
+    name: "{{ snap_classic_packages }}"
+    state: present
+    classic: true

@@ -6,6 +6,7 @@
     - common
     - apt_packages
     - snap_packages
+    - snap_classic_packages
     - flatpak_packages
     - custom_sudo_installs
 - hosts: laptop
