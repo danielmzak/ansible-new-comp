@@ -25,6 +25,7 @@ apt_packages:
   - ncdu # https://code.blicky.net/yorhel/ncdu / https://dev.yorhel.nl/ncdu
   - nmap # https://nmap.org/
   - trash-cli # https://github.com/andreafrancia/trash-cli
+  - eza # https://github.com/eza-community/eza # todo check
 
 #
 # copy/paste
